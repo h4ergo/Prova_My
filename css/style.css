@@ -76,7 +76,7 @@ pre
 #page, .mm-page { height:100%; }
 #page nav { display: none; }
 .mm-menu.mm-front { box-shadow:none !important; }
-body #header { width: 100%; background: url("../img/menu-bg.png") no-repeat center bottom !important; 
+body #header { width: 100%; background: url("../img/menu-bg.gif") no-repeat center bottom !important; 
 	background-size: 100% !important; height: 76px; position:fixed; z-index:3; 
 	-moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s;}
 body.p-home #header { height: 83px; }
@@ -293,7 +293,7 @@ a.explorePane { text-decoration:none; }
 .block { font-size:14px; font-weight:bold; background-color:#f1f2f4; text-align:center; padding:15px;
 border-top:1px solid #ccd2d8; border-bottom: 1px solid #ccd2d8; color:#EA2424; }
 
-.o-page .mm-ismenu { background: url("../img/menu-bg.png") no-repeat center top !important;
+.o-page .mm-ismenu { background: url("../img/menu-bg.gif") no-repeat center top !important;
 background-size: 100% !important; }
 .o-page .mm-list > li { color: #FFF; }
 .o-page .mm-menu.mm-vertical .mm-list .mm-panel { padding: 0px 0px 0px 40px !important; background-color: #0E1419 !important; }
