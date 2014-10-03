@@ -253,7 +253,8 @@ html.mm-blocking #mm-blocker {
     right: 16px; }
 
 html.mm-opened .mm-page {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
+  /*box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }*/
+  box-shadow: none !important; }
 
 .mm-ismenu {
   background: #333333; }
@@ -1194,7 +1195,8 @@ html.mm-opened.mm-opening.mm-front .mm-fixed-bottom {
   bottom: 0; }
 
 html.mm-opened.mm-light .mm-page {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }*/
+  box-shadow: none !important; }
 
 .mm-ismenu.mm-light {
   background: #f3f3f3; }
