@@ -1115,7 +1115,8 @@ html.mm-front #mm-blocker {
 
 .mm-menu.mm-front {
   z-index: 1;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }
+  /*box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); }*/
+  box-shadow: none !important; }
 
 html.mm-opened.mm-next .mm-page {
   box-shadow: none; }
@@ -1240,7 +1241,8 @@ html.mm-opened.mm-light .mm-page {
     border-color: rgba(0, 0, 0, 0.3); }
 
 html.mm-opened.mm-white .mm-page {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); }*/
+  box-shadow: none !important; }
 
 .mm-ismenu.mm-white {
   background: white; }
