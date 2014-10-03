@@ -42,27 +42,34 @@
 				
 				<h3 class="title"><i class="fa fa-envelope"></i> Contact us</h3>
 				
+				<div class="notifications info">
+					<i class="fa fa-info-circle"></i>
+					You need to be connected to Internet for send an email!
+				</div>
+				<div class="notifications info">
+					<i class="fa fa-info-circle"></i>					
+					For send a request to us you need to fill al the fields shown below.
+				</div>
+				
 				<form id="form1" method="POST" action="http://www.myitaliantruffles.com/invia.php">
                         	
                         	<fieldset>
-                                <div class="pull-left">
+                                <div class="">
                     			<label class="name">
-                    				<strong>Name: </strong><input name="nomin" type="text" value="" style="width: 100%">
-                    				 </label><br>
-                    			<label class="email">
-                    				<strong>E-Mail: </strong><input name="email" type="text" value="" style="width: 100%">
-                    				 </label><br>
-                                <label class="phone">
-                    				<strong>Tel: </strong><input name="telef" type="text" value="" style="width: 100%">
+                    				<label>Full Name <span class="required">*</span></label><input name="nomin" type="text" value="" style="width: 100%" placeholder="Name">
                     				 </label>
-                                </div>
-								<br>
-                        		<label class="message pull-left">
-                        			<strong>Message: </strong><textarea style="width: 100%" name="messag" ></textarea>
+                    			<label class="email">
+                    				<label>Email <span class="required">*</span></label><input name="email" type="text" value="" style="width: 100%" placeholder="Email">
+                    				 </label>
+                                <label class="phone">
+                    				<label>Phone </label><input name="telef" type="text" value="" style="width: 100%" placeholder="Phone Number">
+                    				 </label>
+								<label  class="phone">
+                        			<label>Message <span class="required">*</span></label><textarea style="width: 100%" name="messag" placeholder="Type your message here!" rows="10"></textarea>
                         			 </label>
                         			<br class="clear">
                         		<div class="btns">
-								<input type="submit" value="Invia il messaggio">
+								<input type="submit" value="Send" class="o-buttons b-big red">
                         		</div>
                         	</fieldset>
                         </form>
