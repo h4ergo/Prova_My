@@ -66,21 +66,25 @@
 				);
 				
 				function send_email_test(){
-					var nomin 		= document.getElementById("nomin").value;
-					var email 		= document.getElementById("email").value;
+					var error = false;
+					var nomin 		= document.getElementById("nomin").value; 		if(nomin == "") error = true;
+					var email 		= document.getElementById("email").value; 		if(email == "") error = true;
 					var telef 		= document.getElementById("telef").value;
-					var messag 	= document.getElementById("messag").value;
+					var messag 	= document.getElementById("messag").value; 		if(messag == "") error = true;
 				
-					alert(nomin);
-					
-					window.plugin.email.open({
-						to:      	['h4ergo@gmail.com'],
-						//cc:      ['erika.mustermann@appplant.de'],
-						//bcc:     ['john.doe@appplant.com', 'jane.doe@appplant.com'],
-						subject: 'Contact request on My Italian Truffles App',
-						body:    '<b>Contact Name</b>: ' + nomin + '<br \>' + '<b>Contact E-Mail</b>: ' + email + '<br \>' + '<b>Contact Phone</b>: ' + telef + '<br \>' + '<b>Contact Message</b>:<br \>' + messag + '<br \><br \>' + 'Regards\n' + nomin,
-						isHtml:  true
-					});
+					if(error = true){
+						alert("Please fill the required fields on the contact form and retry!");
+					}
+					else{
+						window.plugin.email.open({
+							to:      	['h4ergo@gmail.com'],
+							//cc:      ['erika.mustermann@appplant.de'],
+							//bcc:     ['john.doe@appplant.com', 'jane.doe@appplant.com'],
+							subject: 'Contact request on My Italian Truffles App',
+							body:    '<b>Contact Name</b>: ' + nomin + '<br \><br \>' + '<b>Contact E-Mail</b>: ' + email + '<br \><br \>' + '<b>Contact Phone</b>: ' + telef + '<br \><br \>' + '<b>Contact Message</b>:<br \><br \>' + messag + '<br \><br \>' + 'Regards\n' + nomin,
+							isHtml:  true
+						});
+					}
 				}
 				</script>				
 				        	

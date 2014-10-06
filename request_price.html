@@ -19,6 +19,9 @@
 		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
 		<script type="text/javascript" src="js/gmap3.min.js"></script>
 		<script type="text/javascript" src="js/o-script.js"></script>
+		
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="js/plugin/email_composer.js"></script>
 
 	</head>
 	<body class="o-page p-contact">
@@ -55,22 +58,64 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 					<i class="fa fa-info-circle"></i>					
 					For send a request to us you need to fill al the fields shown below.
 				</div>
-				
-				<form id="form1" method="POST" action="http://www.myitaliantruffles.com/invia.php">
-                        	
+				                        	
+							<script>
+								document.addEventListener('deviceready', function () {
+									// window.plugin.email is now available
+								}, false);
+								
+								window.plugin.email.isServiceAvailable(
+									function (isAvailable) {
+										// alert('Service is not available') unless isAvailable;
+									}
+								);
+								
+								function send_email_test(){
+								
+									var error = false;
+									var nomin 		= document.getElementById("nomin").value; 		if(nomin == "") error = true;
+									var email 		= document.getElementById("email").value; 		if(email == "") error = true;
+									var telef 		= document.getElementById("telef").value;
+									var messag 	= document.getElementById("messag").value; 		if(messag == "") error = true;
+								
+									body1 .= "Tartufo Bianco o Trifola - Tuber Magnatum Pico \n"; 
+									body1 .= "0g - 15g: " + document.getElementById("peso_1_1") . "\n15g - 50g: " + document.getElementById("peso_1_2") . "\n50g - 70g: " + document.getElementById("peso_1_3") . "\nOltre 50g: " + document.getElementById("peso_1_4") . "\n\n";
+									body1 .= "Tartufo Nero estivo, Scorzone - Tuber aestivum \n"; 
+									body1 .= "0g - 15g: " + document.getElementById("peso_2_1") . "\n15g - 50g: " + document.getElementById("peso_2_2") . "\n50g - 70g: " + document.getElementById("peso_2_3") . "\nOltre 50g: " + document.getElementById("peso_2_4") . "\n\n";
+									body1 .= "Tartufo nero liscio - Tuber Melanosporum nero pregiato \n"; 
+									body1 .= "0g - 15g: " + document.getElementById("peso_3_1") . "\n15g - 50g: " + document.getElementById("peso_3_2") . "\n50g - 70g: " + document.getElementById("peso_3_3") . "\nOltre 50g: " + document.getElementById("peso_3_4") . "\n\n";
+									body1 .= "Tartufo uncinato, Scorzone invernale - Tuber Uncinatum \n"; 
+									body1 .= "0g - 15g: " + document.getElementById("peso_4_1") . "\n15g - 50g: " + document.getElementById("peso_4_2") . "\n50g - 70g: " + document.getElementById("peso_4_3") . "\nOltre 50g: " + document.getElementById("peso_4_4") . "\n\n";
+								
+									if(error = true){
+										alert("Please fill the required fields on the contact form and retry!");
+									}
+									else{
+										window.plugin.email.open({
+											to:      	['h4ergo@gmail.com'],
+											//cc:      ['erika.mustermann@appplant.de'],
+											//bcc:     ['john.doe@appplant.com', 'jane.doe@appplant.com'],
+											subject: 'Contact request on My Italian Truffles App',
+											body:    '<b>Contact Name</b>: ' + nomin + '<br \><br \>' + '<b>Contact E-Mail</b>: ' + email + '<br \><br \>' + '<b>Contact Phone</b>: ' + telef + '<br \><br \>' + '<b>Contact Message</b>:<br \><br \>' + messag + '<br \><br \>' + body1 + '<br \><br \>' + 'Regards\n' + nomin,
+											isHtml:  true
+										});
+									}
+								}
+								</script>	
+							
                         	<fieldset>
                                 <div class="">
                     			<label class="name">
-                    				<label>Full Name <span class="required">*</span></label><input name="nomin" type="text" value="" style="width: 100%" placeholder="Name">
+                    				<label>Full Name <span class="required">*</span></label><input name="nomin" id="nomin" type="text" value="" style="width: 100%" placeholder="Name">
                     				 </label>
                     			<label class="email">
-                    				<label>Email <span class="required">*</span></label><input name="email" type="text" value="" style="width: 100%" placeholder="Email">
+                    				<label>Email <span class="required">*</span></label><input name="email" id="email" type="text" value="" style="width: 100%" placeholder="Email">
                     				 </label>
                                 <label class="phone">
-                    				<label>Phone </label><input name="telef" type="text" value="" style="width: 100%" placeholder="Phone Number">
+                    				<label>Phone </label><input name="telef" id="telef" type="text" value="" style="width: 100%" placeholder="Phone Number">
                     				 </label>
 								<label  class="phone">
-                        			<label>Message <span class="required">*</span></label><textarea style="width: 100%" name="messag" placeholder="Type your message here!" rows="10"></textarea>
+                        			<label>Message <span class="required">*</span></label><textarea style="width: 100%" name="messag" id="messag" placeholder="Type your message here!" rows="10"></textarea>
                         			 </label>
                         			<br class="clear">
 									
@@ -265,10 +310,9 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 								
 								
                         		<div class="btns">
-									<input type="submit" value="Send" class="o-buttons b-big red">							
+									<input type="button" value="Send" class="o-buttons b-big red" onClick="send_email_test()">				
                         		</div>
                         	</fieldset>
-                        </form>
 						
 				<h3 class="title"><i class="fa fa-map-marker"></i> Location</h3>
 				<p>
