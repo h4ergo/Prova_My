@@ -78,14 +78,14 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									var telef 		= document.getElementById("telef").value;
 									var messag 	= document.getElementById("messag").value; 		if(messag == "") error = true;
 								
-									body1 .= "Tartufo Bianco o Trifola - Tuber Magnatum Pico \n"; 
-									body1 .= "0g - 15g: " + document.getElementById("peso_1_1") . "\n15g - 50g: " + document.getElementById("peso_1_2") . "\n50g - 70g: " + document.getElementById("peso_1_3") . "\nOltre 50g: " + document.getElementById("peso_1_4") . "\n\n";
-									body1 .= "Tartufo Nero estivo, Scorzone - Tuber aestivum \n"; 
-									body1 .= "0g - 15g: " + document.getElementById("peso_2_1") . "\n15g - 50g: " + document.getElementById("peso_2_2") . "\n50g - 70g: " + document.getElementById("peso_2_3") . "\nOltre 50g: " + document.getElementById("peso_2_4") . "\n\n";
-									body1 .= "Tartufo nero liscio - Tuber Melanosporum nero pregiato \n"; 
-									body1 .= "0g - 15g: " + document.getElementById("peso_3_1") . "\n15g - 50g: " + document.getElementById("peso_3_2") . "\n50g - 70g: " + document.getElementById("peso_3_3") . "\nOltre 50g: " + document.getElementById("peso_3_4") . "\n\n";
-									body1 .= "Tartufo uncinato, Scorzone invernale - Tuber Uncinatum \n"; 
-									body1 .= "0g - 15g: " + document.getElementById("peso_4_1") . "\n15g - 50g: " + document.getElementById("peso_4_2") . "\n50g - 70g: " + document.getElementById("peso_4_3") . "\nOltre 50g: " + document.getElementById("peso_4_4") . "\n\n";
+									body1 = "<b>Tartufo Bianco o Trifola - Tuber Magnatum Pico</b> <br \>"
+									+ "0g - 15g: " + document.getElementById("peso_1_1") + "<br \>15g - 50g: " + document.getElementById("peso_1_2") + "<br \>50g - 70g: " + document.getElementById("peso_1_3") + "<br \>Oltre 50g: " + document.getElementById("peso_1_4") + "<br \><br \>"
+									+ "<b>Tartufo Nero estivo, Scorzone - Tuber aestivum </b><br \>"
+									+ "0g - 15g: " + document.getElementById("peso_2_1") + "<br \>15g - 50g: " + document.getElementById("peso_2_2") + "<br \>50g - 70g: " + document.getElementById("peso_2_3") + "<br \>Oltre 50g: " + document.getElementById("peso_2_4") + "<br \><br \>"
+									+ "<b>Tartufo nero liscio - Tuber Melanosporum nero pregiato </b><br \>"
+									+ "0g - 15g: " + document.getElementById("peso_3_1") + "<br \>15g - 50g: " + document.getElementById("peso_3_2") + "<br \>50g - 70g: " + document.getElementById("peso_3_3") + "<br \>Oltre 50g: " + document.getElementById("peso_3_4") + "<br \><br \>"
+									+ "<b>Tartufo uncinato, Scorzone invernale - Tuber Uncinatum </b><br \>"
+									+ "0g - 15g: " + document.getElementById("peso_4_1") + "<br \>15g - 50g: " + document.getElementById("peso_4_2") + "<br \>50g - 70g: " + document.getElementById("peso_4_3") + "<br \>Oltre 50g: " + document.getElementById("peso_4_4") + "<br \><br \>"
 								
 									if(error = true){
 										alert("Please fill the required fields on the contact form and retry!");
@@ -128,7 +128,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 								</tr>
 								<tr>
 										<td>
-										<select name="peso_1_1" style="width: 100%">
+										<select id="peso_1_1" name="peso_1_1" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -138,7 +138,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td>
 									 <td  style="padding: 10px">
-									<select name="peso_1_2" style="width: 100%">
+									<select id="peso_1_2" name="peso_1_2" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -147,7 +147,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_1_3" style="width: 100%">
+									<select id="peso_1_3" name="peso_1_3" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -156,7 +156,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_1_4" style="width: 100%">
+									<select id="peso_1_4" name="peso_1_4" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -174,7 +174,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 								</tr>
 								<tr>
 										<td>
-										<select name="peso_2_1" style="width: 100%">
+										<select id="peso_2_1" name="peso_2_1" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -184,7 +184,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td>
 									 <td  style="padding: 10px">
-									<select name="peso_2_2" style="width: 100%">
+									<select id="peso_2_2" name="peso_2_2" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -193,7 +193,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_2_3" style="width: 100%">
+									<select id="peso_2_3" name="peso_2_3" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -202,7 +202,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_2_4" style="width: 100%">
+									<select id="peso_2_4" name="peso_2_4" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -221,7 +221,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 								</tr>
 								<tr>
 										<td>
-										<select name="peso_3_1" style="width: 100%">
+										<select id="peso_3_1" name="peso_3_1" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -231,7 +231,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td>
 									 <td  style="padding: 10px">
-									<select name="peso_3_2" style="width: 100%">
+									<select id="peso_3_2" name="peso_3_2" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -240,7 +240,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_3_3" style="width: 100%">
+									<select id="peso_3_3" name="peso_3_3" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -249,7 +249,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_3_4" style="width: 100%">
+									<select id="peso_3_4" name="peso_3_4" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -268,7 +268,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 								</tr>
 								<tr>
 										<td>
-										<select name="peso_4_1" style="width: 100%">
+										<select id="peso_4_1" name="peso_4_1" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -278,7 +278,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td>
 									 <td  style="padding: 10px">
-									<select name="peso_4_2" style="width: 100%">
+									<select id="peso_4_2" name="peso_4_2" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -287,7 +287,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_4_3" style="width: 100%">
+									<select id="peso_4_3" name="peso_4_3" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
@@ -296,7 +296,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									   <option value="2500g">2500g</option>
 									   <option value="Oltre 2500g">Oltre 2500g</option>
 									 </select></td><td   style="padding: 10px">
-									<select name="peso_4_4" style="width: 100%">
+									<select id="peso_4_4" name="peso_4_4" style="width: 100%">
 									   <option value="0g" selected="selected">0g</option>
 									   <option value="500g">500g</option>
 									   <option value="1000g">1000g</option>
