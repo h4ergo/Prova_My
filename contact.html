@@ -20,8 +20,8 @@
 		<script type="text/javascript" src="js/gmap3.min.js"></script>
 		<script type="text/javascript" src="js/o-script.js"></script>
 		
-		<script type="text/javascript" src="js/plugin/cordova.js"></script>
-		<script type="text/javascript" src="js/plugin/email_composer.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<!--<script type="text/javascript" src="js/plugin/email_composer.js"></script>-->
 
 	</head>
 	<body class="o-page p-contact">
@@ -55,6 +55,7 @@
 				</div>
 				
 				<script>
+				/*
 				document.addEventListener('deviceready', function () {
 					// window.plugin.email is now available
 				}, false);
@@ -73,6 +74,16 @@
 						subject: 'Prova di invio',
 						body:    'Ciao, questa è una prova di invio da APP, Gio.'
 					});
+				}
+				*/
+				
+				function send_email_test(){
+					document.addEventListener('deviceready',
+											   onDeviceReady,
+											   false);
+					function onDeviceReady() {
+						alert("model = " + device.model);
+					}
 				}
 				</script>
 				
