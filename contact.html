@@ -20,6 +20,7 @@
 		<script type="text/javascript" src="js/gmap3.min.js"></script>
 		<script type="text/javascript" src="js/o-script.js"></script>
 		
+		<script type="text/javascript" src="js/plugin/cordova.js"></script>
 		<script type="text/javascript" src="js/plugin/email_composer.js"></script>
 
 	</head>
@@ -64,14 +65,18 @@
 					}
 				);
 				
-				window.plugin.email.open({
-					to:      ['h4ergo@gmail.com'],
-					//cc:      ['erika.mustermann@appplant.de'],
-					//bcc:     ['john.doe@appplant.com', 'jane.doe@appplant.com'],
-					subject: 'Prova di invio',
-					body:    'Ciao, questa è una prova di invio da APP, Gio.'
-				});
+				function send_email_test(){
+					window.plugin.email.open({
+						to:      ['h4ergo@gmail.com'],
+						//cc:      ['erika.mustermann@appplant.de'],
+						//bcc:     ['john.doe@appplant.com', 'jane.doe@appplant.com'],
+						subject: 'Prova di invio',
+						body:    'Ciao, questa è una prova di invio da APP, Gio.'
+					});
+				}
 				</script>
+				
+				<input type="button" value="TEST" onClick="send_email_test()">
 				
 				<form id="form1" method="POST" action="http://www.myitaliantruffles.com/invia.php">
                         	
