@@ -51,7 +51,7 @@
 				</div>
 				<div class="notifications info">
 					<i class="fa fa-info-circle"></i>					
-					For send a request to us you need to fill al the fields shown below.
+					For send a request to us you need to fill al the fields shown below, afted that, click on Send and select your Email Account for sent the contact request.
 				</div>
 				
 				<script>
@@ -67,50 +67,48 @@
 				
 				function send_email_test(){
 					window.plugin.email.open({
+						var nomin 		= document.getElementById("nomin").value;
+						var email 		= document.getElementById("email").value;
+						var telef 		= document.getElementById("telef").value;
+						var messag 	= document.getElementById("messag").value;
+					
 						to:      ['h4ergo@gmail.com'],
 						//cc:      ['erika.mustermann@appplant.de'],
 						//bcc:     ['john.doe@appplant.com', 'jane.doe@appplant.com'],
-						subject: 'Prova di invio',
-						body:    'Ciao, questa è una prova di invio da APP, Gio.'
+						subject: 'Contact request on My Italian Truffles App',
+						body:    'Contact Name: ' & nomin & "\n" 
+									'Contact E-Mail: ' & email & "\n" 
+									'Contact Phone: ' & telef & "\n" 
+									'Contact Message:\n' & messag & "\n\n" 
+									'Regards\n' & nomin 
 					});
 				}
-				/*
-				function send_email_test(){
-					document.addEventListener('deviceready',
-											   onDeviceReady,
-											   false);
-					function onDeviceReady() {
-						alert("model = " + device.model);
-					}
-				}
-				*/
 				</script>
 				
 				<input type="button" value="TEST" onClick="send_email_test()">
 				
-				<form id="form1" method="POST" action="http://www.myitaliantruffles.com/invia.php">
-                        	
+				        	
                         	<fieldset>
                                 <div class="">
                     			<label class="name">
-                    				<label>Full Name <span class="required">*</span></label><input name="nomin" type="text" value="" style="width: 100%" placeholder="Name">
+                    				<label>Full Name <span class="required">*</span></label><input name="nomin" id="nomin" type="text" value="" style="width: 100%" placeholder="Name">
                     				 </label>
                     			<label class="email">
-                    				<label>Email <span class="required">*</span></label><input name="email" type="text" value="" style="width: 100%" placeholder="Email">
+                    				<label>Email <span class="required">*</span></label><input name="email" id="email" type="text" value="" style="width: 100%" placeholder="Email">
                     				 </label>
                                 <label class="phone">
-                    				<label>Phone </label><input name="telef" type="text" value="" style="width: 100%" placeholder="Phone Number">
+                    				<label>Phone </label><input name="telef" id="telef" type="text" value="" style="width: 100%" placeholder="Phone Number">
                     				 </label>
 								<label  class="phone">
-                        			<label>Message <span class="required">*</span></label><textarea style="width: 100%" name="messag" placeholder="Type your message here!" rows="10"></textarea>
+                        			<label>Message <span class="required">*</span></label><textarea style="width: 100%" name="messag" id="messag" placeholder="Type your message here!" rows="10"></textarea>
                         			 </label>
                         			<br class="clear">
                         		<div class="btns">
-								<input type="submit" value="Send" class="o-buttons b-big red">
+								<input type="button" value="Send" class="o-buttons b-big red" onClick="send_email_test()">
                         		</div>
                         	</fieldset>
-                        </form>
-
+							
+							
 				<h3 class="title"><i class="fa fa-map-marker"></i> Location</h3>
 				<p>
 					Italian Truffles, 
