@@ -66,19 +66,19 @@
 				);
 				
 				function send_email_test(){
+					var nomin 		= document.getElementById("nomin").value;
+					var email 		= document.getElementById("email").value;
+					var telef 		= document.getElementById("telef").value;
+					var messag 	= document.getElementById("messag").value;
+				
+					alert(nomin);
+					
 					window.plugin.email.open({
-						var nomin 		= document.getElementById("nomin").value;
-						var email 		= document.getElementById("email").value;
-						var telef 		= document.getElementById("telef").value;
-						var messag 	= document.getElementById("messag").value;
-					
-						alert(nomin);
-					
 						to:      	['h4ergo@gmail.com'],
 						//cc:      ['erika.mustermann@appplant.de'],
 						//bcc:     ['john.doe@appplant.com', 'jane.doe@appplant.com'],
 						subject: 'Contact request on My Italian Truffles App',
-						//body:    '<b>Contact Name</b>: ' + nomin + '<br \>' + '<b>Contact E-Mail</b>: ' + email + '<br \>' + '<b>Contact Phone</b>: ' + telef + '<br \>' + '<b>Contact Message</b>:<br \>' + messag + '<br \><br \>' + 'Regards\n' + nomin,
+						body:    '<b>Contact Name</b>: ' + nomin + '<br \>' + '<b>Contact E-Mail</b>: ' + email + '<br \>' + '<b>Contact Phone</b>: ' + telef + '<br \>' + '<b>Contact Message</b>:<br \>' + messag + '<br \><br \>' + 'Regards\n' + nomin,
 						isHtml:  true
 					});
 				}
