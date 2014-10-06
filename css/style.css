@@ -306,7 +306,7 @@ background-size: 100% !important; }
 .o-page .mm-menu .mm-search input { border: 0px; background: rgba(0, 0, 0, 0); color: rgba(255, 255, 255, 0.6); }
 .o-page .mm-menu li.mm-noresults { text-align: center; font-size: 15px; display: none; padding: 10px; }
 .o-page .mm-list > li > a, 
-.o-page .mm-list > li > span { line-height: 30px; padding: 15px 10px 5px 15px; text-decoration: none; font-size: 20px; }
+.o-page .mm-list > li > span { line-height: 30px; padding: 10px 10px 5px 15px; text-decoration: none; font-size: 16px; }
 .o-page .mm-list > li > a:hover { background: rgba(0, 0, 0, 0.1); }
 .o-page .mm-list a.mm-subopen { padding:0px;}
 .o-page .mm-menu.mm-vertical .mm-list > li.mm-opened > a.mm-subopen:after { top: 20px; }
