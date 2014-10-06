@@ -56,7 +56,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 				</div>
 				<div class="notifications info">
 					<i class="fa fa-info-circle"></i>					
-					For send a request to us you need to fill al the fields shown below, afted that, click on Send and select your Email Account for sent the contact request.
+					For send a request to us you need to fill al the fields shown below.
 				</div>
 				                        	
 							<script>
@@ -70,13 +70,13 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 									}
 								);
 								
-								function send_email_test(){
+								function send_prices_test(){
 								
 									var error = false;
-									var nomin 		= document.getElementById("nomin").value; 	
-									var email 		= document.getElementById("email").value; 	
+									var nomin 		= document.getElementById("nomin").value; 		if(nomin == "") error = true;
+									var email 		= document.getElementById("email").value; 		if(email == "") error = true;
 									var telef 		= document.getElementById("telef").value;
-									var messag 	= document.getElementById("messag").value; 	
+									var messag 	= document.getElementById("messag").value; 		if(messag == "") error = true;
 								
 									body1 = "<b>Tartufo Bianco o Trifola - Tuber Magnatum Pico</b> <br \>"
 									+ "0g - 15g: " + document.getElementById("peso_1_1") + "<br \>15g - 50g: " + document.getElementById("peso_1_2") + "<br \>50g - 70g: " + document.getElementById("peso_1_3") + "<br \>Oltre 50g: " + document.getElementById("peso_1_4") + "<br \><br \>"
@@ -310,7 +310,7 @@ we only ship supplies truffle with <b>minimum of 500g of order</b> .
 								
 								
                         		<div class="btns">
-									<input type="button" value="Send" class="o-buttons b-big red" onClick="send_email_test()">				
+									<input type="button" value="Send" class="o-buttons b-big red" onClick="send_prices_test()">				
                         		</div>
                         	</fieldset>
 						
