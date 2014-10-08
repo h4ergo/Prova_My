@@ -44,7 +44,7 @@ $(function(){
 	//---------------------------------------------------------------------- mmenu
 	$('nav#menu').mmenu({
 		 searchfield : false,
-		 slidingSubmenus: true,
+		 slidingSubmenus: false,
          position: "top",
          zposition: "front"
 	});
