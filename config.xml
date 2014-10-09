@@ -137,5 +137,6 @@ Define our products as "Gold Abruzzo " because we sell a unique product in the w
 	<icon src="cordova/cordova_173.png" gap:platform="winphone" gap:role="background"/>	
 	
 	<gap:plugin name="de.appplant.cordova.plugin.email-composer" version="0.8.1" />	
+	<gap:plugin name="InAppBrowser" value="org.apache.cordova.InAppBrowser" />
     <gap:plugin name="org.apache.cordova.device" />
 </widget>
