@@ -78,7 +78,7 @@ pre
 .mm-menu.mm-front { box-shadow:none !important; }
 body #header { width: 100%; background: url("../img/menu-bg.png") no-repeat center bottom !important; 
 	background-size: 100% !important; height: 76px; position:fixed; z-index:3; 
-	-moz-transition: all 0.2s; -webkit-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s;}
+	-moz-transition: all 0.0s; -webkit-transition: all 0.0s; -o-transition: all 0.0s; transition: all 0.0s;}
 body.p-home #header { height: 80px; }
 
 /* body.p-home .header-content { position: absolute; bottom: 40px; width: 100%; text-align: center; height: 80px; } */
@@ -134,12 +134,12 @@ background: rgba(0, 0, 0, 0.5); padding: 20px 30px 10px; display: inline-block; 
 	width: 100%;
  }
 .mm-menu > .mm-opened {
-	-moz-transition: all 0.3s; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;
+	-moz-transition: all 0.0s; -webkit-transition: all 0.0s; -o-transition: all 0.0s; transition: all 0.0s;
 	opacity:1;
 }
 
 .mm-menu > .mm-opened.mm-subopened {
-	-moz-transition: all 0.3s; -webkit-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;
+	-moz-transition: all 0.0s; -webkit-transition: all 0.0s; -o-transition: all 0.0s; transition: all 0.0s;
 	opacity:0;
 }
  
