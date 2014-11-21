@@ -4,8 +4,8 @@
 		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
 		<meta name="author" content="www.frebsite.nl" />
 		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
-		<title>MyItalianTruffles - Shortcodes</title>
 
+		<title>MyItalianTruffles - About Abruzzo</title>
 		<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon">
 
 		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
@@ -16,12 +16,11 @@
 		
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
-		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-		<script type="text/javascript" src="js/gmap3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easy-pie-chart.js"></script>
 		<script type="text/javascript" src="js/o-script.js"></script>
 
 	</head>
-	<body class="o-page p-contact">
+	<body class="o-page p-about">
 		<div id="page">
 			<div id="header">
 				<div class="header-content">
@@ -30,42 +29,39 @@
 					<a href="javascript:history.back();" class="p-link-back"><i class="fa fa-arrow-left"></i></a>
 				</div>
 			</div>
-			<div class="bannerPane" style="height:300px">
-				<div id="map" style="width:100%; height:300px;"></div>
+			<div class="bannerPane">
+				<div class="overlay"></div>
 				<div class="s-banner-content">
 					<div><img  width="100" src="img/logo_pages.png" /></div>
+					About Abruzzo
 				</div>
 			</div>
-			<!-- MAP -->
-			
 			<div id="content">
 				
-				<h3 class="title"><i class="fa fa-envelope"></i> Contact us</h3>
+				<article style="padding: 15px">
+				<h2><a href="#">About Abruzzo</a></h2><br>
+                <div class="black" align="justify">                	
+                </div>
+                <div class="black block1" align="justify">
+                	 The region of Abruzzo is in central Italy, south of the more famous regions of Tuscany and Umbria. Abruzzo is a true gem, an undiscovered treasure of Italy. Nature has blessed it with both rugged mountains (White Truffles are best when located at 800 meters and above) and long sandy beaches on the Adriatic coast. <br /><br />
+	 <div style="width: 100%" align="center"><img src="img/gallery/page_1_bg.jpg" style="width: 100%"></div><br />
+					Abruzzo boasts the title of <strong>Greenest Region in Europe</strong> thanks to two third of its territory, the largest in Europe, set aside as national parks and protected nature reserves. In the region there are three national parks, one regional park and 38 protected nature reserves. <br /><br />
+	 <div style="width: 100%" align="center"><img src="img/antonio_3.jpg" style="width: 100%"></div><br />
+     <strong>Green</strong> and <strong>Organic</strong> are not merely words in Abruzzo, in fact, green and organic have been second nature to the people of Abruzzo for many years; long before they were used in other parts of the world! Well known for its variety and richness, owing to the diversity of its topology, soil and weather, Abruzzo boasts one of the best cuisines to be found in Italy a "gastronomical heaven."<br /><br />
+	 <div style="width: 100%" align="center"><img src="img/antonio_2.jpg" style="width: 100%"></div><br />
+     The London Times newspaper described Abruzzo as <strong>the king of Agritourismo</strong><br />
+     When the Italian diplomat and journalist Primo Levi visited Abruzzo he described it as "forte e gentile" (strong and gentle) which, he said, best synthesized the beauty of the region and the character of its people. The quote "forte e gentile" has since become the motto of the region and its inhabitants.
+	 <br><br>
+	 <div style="width: 100%" align="center"><img src="img/tartufi7.jpg" style="width: 100%"></div><br />
+                </div>
+				<br><br>
 				
-				<form id="contact" class="contactForm">
-					
-					<label>Full Name <span class="required">*</span></label><br>
-					<input type="text" name="name" id="ContactName" placeholder="Name">
-					
-					<label>Email <span class="required">*</span></label><br>
-					<input type="email" name="mail" id="ContactEmail" placeholder="Email">
-					
-					<label>Message <span class="required">*</span></label><br>
-					<textarea id="ContactMessage" name="comment" placeholder="Message"></textarea>
-					
-					<input type="submit"  class="btn-normal" id="SubmitContact" value="send">
-					
-					<div id="msg" class="notifications" style="display:none"></div>
-				</form>
 
-				<h3 class="title"><i class="fa fa-map-marker"></i> Location</h3>
-				<p>
-					Italian Truffles, 
-					Pratola Peligna (AQ) - Abruzzo
-				</p>
+				</article>
+
 			</div>
 			
-<div class="subFooter">&copy; MyItalianTruffles 2014 - <a href="http://www.sigitechnologies.com">SiGi Tech</a></div>
+			<div class="subFooter">&copy; MyItalianTruffles 2014 - <a href="http://www.sigitechnologies.com">SiGi Tech</a></div>
 			
 			<!-- Menu navigation -->
 			<nav id="menu">
@@ -75,7 +71,7 @@
 							<i class="fa fa-home"></i>Home
 						</a>
 					</li>
-					<li class="Selected">
+					<li>
 						<a href="about.html">
 							<i class="fa fa-users"></i>About Us
 						</a>
@@ -85,7 +81,7 @@
 							<i class="fa fa-pencil-square-o"></i>Our Mission</i>
 						</a>
 					</li>
-					<li>
+					<li class="Selected">
 						<a href="about_Abruzzo.html">
 							<i class="fa fa-pencil-square-o"></i>About Abruzzo</i>
 						</a>
@@ -95,19 +91,14 @@
 							<i class="fa fa-pencil-square-o"></i>Our Products</i>
 						</a>			
 					</li>
-                     <li>
+					  <li>
 						<a href="preserved_truffles.html">
 							<i class="fa fa-pencil-square-o"></i>Preserved Truffles</i>
 						</a>			
-					</li>										
-					<li class="Selected">
+					</li>					
+					<li>
 						<a href="shipment.html">
 							<i class="fa fa-flag-o"></i>Shipment</i>
-						</a>
-					</li>
-					<li>
-						<a href="request_price.html">
-							<i class="fa fa-list-alt"></i>Pricing
 						</a>
 					</li>
 					<li>
@@ -132,6 +123,7 @@
 					</li>
 				</ul>
 			</nav>
+			
 		</div>
 	</body>
 </html>
